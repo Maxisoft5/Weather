@@ -38,7 +38,10 @@ namespace WeatherWatcher.DataAccess.Repositories
                 {
                     filterDateExpr = GetRangeDateOnlyExpressionForField(dateOnlyFilter, expression);
                 }
-                filterExpr = filterDateExpr;
+                if (filterDateExpr != null)
+                {
+                    filterExpr = filterDateExpr;
+                }
             }
             if (timeFilters != null)
             {
@@ -46,12 +49,16 @@ namespace WeatherWatcher.DataAccess.Repositories
                 {
                     filterTimeExpr = GetTimeOnlyExpressionForField(timeFilter, expression);
                 }
-                if (filterExpr != null)
+                if (filterExpr != null && filterTimeExpr != null)
                 {
                     filterExpr = Expression.And(filterExpr, filterTimeExpr);
-                } else
+                } 
+                else
                 {
-                    filterExpr = filterTimeExpr;
+                    if (filterTimeExpr != null)
+                    {
+                        filterExpr = filterTimeExpr;
+                    }
                 }
             }
             if (filterExpr != null)
@@ -153,7 +160,10 @@ namespace WeatherWatcher.DataAccess.Repositories
                 {
                     filterDateExpr = GetRangeDateOnlyExpressionForField(dateOnlyFilter, expression);
                 }
-                filterExpr = filterDateExpr;
+                if (filterDateExpr != null)
+                {
+                    filterExpr = filterDateExpr;
+                }
             }
             if (timeFilters != null)
             {
@@ -161,13 +171,16 @@ namespace WeatherWatcher.DataAccess.Repositories
                 {
                     filterTimeExpr = GetTimeOnlyExpressionForField(timeFilter, expression);
                 }
-                if (filterExpr != null)
+                if (filterExpr != null && filterTimeExpr != null)
                 {
                     filterExpr = Expression.And(filterExpr, filterTimeExpr);
                 }
                 else
                 {
-                    filterExpr = filterTimeExpr;
+                    if (filterTimeExpr != null)
+                    {
+                        filterExpr = filterTimeExpr;
+                    }
                 }
             }
             if (filterExpr != null)
