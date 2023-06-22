@@ -1,0 +1,44 @@
+﻿@model List<WeatherWatcher.DTO.EntityDTO.LoadArchiveStatusDTO>
+@{
+    ViewData["Title"] = "Load Status";
+    <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
+}
+<h3>Load Arhcive Status <button type="button" id="refreshTable" class="btn btn-dark">Refresh table</button></h3>
+
+@section Scripts {
+    <script src="~/js/loadStatuses.js"></script>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/jquery/latest/jquery.min.js"></script>
+}
+
+<table class="table">
+    <thead>
+        <tr class="table-dark">
+            <th scope="col">Start DateTime</th>
+            <th scope="col">End DateTime</th>
+            <th scope="col">Load Status</th>
+            <th scope="col">Rows Count</th>
+            <th scope="col">Error</th>
+        </tr>
+        <tr>
+            <th scope="col"></th>
+            <th scope="col"></th>
+            <th scope="col"></th>
+            <th scope="col"></th>
+            <th scope="col"></th>
+            <th scope="col"></th>
+        </tr>
+    </thead>
+    <tbody id="tableBody">
+        @for (int i = 0; i < Model.Count; i++)
+        {
+            <tr>
+                <td>@Model[i].StartDateTime</td>
+                <td>@Model[i].EndDateTime</td>
+                <td>@Model[i].LoadStatus</td>
+                <td>@Model[i].RowsCount</td>
+                <td>@Model[i].Error</td>
+            </tr>
+        }
+    </tbody>
+</table>
+

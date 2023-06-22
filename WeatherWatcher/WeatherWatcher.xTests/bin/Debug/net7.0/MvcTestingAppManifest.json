@@ -1,0 +1,9 @@
+{
+  "WeatherWatcher.BackgroundServices, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null": "C:\\Users\\Maksym\\source\\repos\\WeatherWatcher\\WeatherWatcher.BackgroundServices",
+  "WeatherWatcher.DataAccess, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null": "C:\\Users\\Maksym\\source\\repos\\WeatherWatcher\\WeatherWatcher.DataAccess",
+  "WeatherWatcher, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null": "C:\\Users\\Maksym\\source\\repos\\WeatherWatcher\\WeatherWatcher",
+  "WeatherWatcher.Domain, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null": "C:\\Users\\Maksym\\source\\repos\\WeatherWatcher\\WeatherWatcher.Domain",
+  "WeatherWatcher.DTO, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null": "C:\\Users\\Maksym\\source\\repos\\WeatherWatcher\\WeatherWatcher.DTO",
+  "WeatherWatcher.Services, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null": "C:\\Users\\Maksym\\source\\repos\\WeatherWatcher\\WeatherWatcher.Services",
+  "WeatherWatcher.Services.Infrastructure, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null": "C:\\Users\\Maksym\\source\\repos\\WeatherWatcher\\WeatherWatcher.Services.Infrastructure"
+}

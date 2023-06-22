@@ -1,0 +1,12 @@
+{
+  "version": 2,
+  "dgSpecHash": "wbNxEVSXxLW5+RQIARwjuDpkx3DgSjBmUbbxkGLJcdQAguM3STSTyRL6KJc8LQ5k34RAmgTP5VnmVBu6Ia70Fw==",
+  "success": true,
+  "projectFilePath": "C:\\Users\\Maksym\\Documents\\GitHub\\Weather\\WeatherWatcher\\WeatherWatcher.Domain\\WeatherWatcher.Domain.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\Maksym\\.nuget\\packages\\microsoft.aspnetcore.http.features\\5.0.17\\microsoft.aspnetcore.http.features.5.0.17.nupkg.sha512",
+    "C:\\Users\\Maksym\\.nuget\\packages\\microsoft.extensions.primitives\\5.0.1\\microsoft.extensions.primitives.5.0.1.nupkg.sha512",
+    "C:\\Users\\Maksym\\.nuget\\packages\\system.io.pipelines\\5.0.2\\system.io.pipelines.5.0.2.nupkg.sha512"
+  ],
+  "logs": []
+}

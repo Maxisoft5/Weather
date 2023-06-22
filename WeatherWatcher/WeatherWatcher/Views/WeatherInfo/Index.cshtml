@@ -1,0 +1,23 @@
+﻿
+@{
+    ViewData["Title"] = "Load Status";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/daterangepicker/daterangepicker.css" />
+    <link href="https://cdn.jsdelivr.net/npm/timepicker@1.14.0/jquery.timepicker.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="~/css/weatherTable.css" />
+}
+
+@section Scripts {
+    <script src="~/js/weatherTable.js"></script>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/jquery/latest/jquery.min.js"></script>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/momentjs/latest/moment.min.js"></script>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/daterangepicker/daterangepicker.min.js"></script>
+    <script src="~/lib/timepicker/jquery.timepicker.js"></script>
+}
+
+<h1>Weather archive</h1>    
+<div id="tableWithPaginator">
+
+</div>
+<h3 id="tableLoading">Loading...</h3>

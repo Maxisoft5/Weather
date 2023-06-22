@@ -1,0 +1,91 @@
+﻿@model WeatherWatcher.DTO.Filters.TableFilterPaginatorDTO
+@{
+    <script src="~/js/weatherPaginator.js"></script>
+    <script src="~/lib/timepicker/jquery.timepicker.js"></script>
+}
+
+<table class="table">
+    <thead>
+        <tr class="table-dark">
+            <th scope="col">Id</th>
+            <th scope="col">Date</th>
+            <th scope="col">Time</th>
+            <th scope="col">Wind Temperature</th>
+            <th scope="col">Relative Humidity</th>
+            <th scope="col">Dew Point Temperature</th>
+            <th scope="col">Atmosphere Pressure</th>
+            <th scope="col">Wind Direction</th>
+            <th scope="col">Wind Speed</th>
+            <th scope="col">Cloudiness</th>
+            <th scope="col">Bottom Line Cloudiness</th>
+            <th scope="col">Horizontal Visibility</th>
+            <th scope="col">Weather Phenomena</th>
+        </tr>
+        <tr>
+            <th scope="col"></th>
+            <th scope="col">
+                <input class="form-control" type="text" name="daterange" id="dateOnlyFilter" />
+            </th>
+            <th scope="col">
+                <input class="form-control" type="text" id="timeOnlyFilter" />
+            </th>
+            <th scope="col"></th>
+            <th scope="col"></th>
+            <th scope="col"></th>
+            <th scope="col"></th>
+            <th scope="col"></th>
+            <th scope="col"></th>
+            <th scope="col"></th>
+            <th scope="col"></th>
+            <th scope="col"></th>
+            <th scope="col"></th>
+        </tr>
+    </thead>
+    <tbody id="tableBody">
+        @for (int i = 0; i < Model.WeatherInfos.Count; i++)
+        {
+            <tr>
+                <td>@Model.WeatherInfos[i].Id</td>
+                <td>@Model.WeatherInfos[i].DateOnly</td>
+                <td>@Model.WeatherInfos[i].TimeOnly</td>
+                <td>@Model.WeatherInfos[i].WindTemperature</td>
+                <td>@Model.WeatherInfos[i].RelativeHumidity</td>
+                <td>@Model.WeatherInfos[i].DewPointTemperature</td>
+                <td>@Model.WeatherInfos[i].AtmospherePressure</td>
+                <td>@Model.WeatherInfos[i].WindDirection</td>
+                <td>@Model.WeatherInfos[i].WindSpeed</td>
+                <td>@Model.WeatherInfos[i].Cloudiness</td>
+                <td>@Model.WeatherInfos[i].BottomLineCloudiness</td>
+                <td>@Model.WeatherInfos[i].HorizontalVisibility</td>
+                <td>@Model.WeatherInfos[i].WeatherPhenomena</td>
+            </tr>
+        }
+    </tbody>
+</table>
+@if (Model.WeatherInfos.Count > 0)
+{
+<div class="paginationContainer">
+    <nav aria-label="..." id="tablePagination">
+        <ul class="pagination pagination-lg">
+
+            @for (int i = Model.Start; i < Model.End; i++)
+            {
+                @if (i == Model.CurrentLinkNumber)
+                {
+                    <li class="page-item active" aria-current="page">
+                        <span id="page-active-link" class="page-link">@(i + 1)</span>
+                    </li>
+                }
+                else
+                {
+                    <li class="page-item"><a class="page-link page-not-active-link">@(i + 1)</a></li>
+                }
+            }
+
+        </ul>
+    </nav>
+</div>
+}
+
+
+
