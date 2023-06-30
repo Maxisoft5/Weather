@@ -51,7 +51,6 @@ function getPaginated() {
             if (time && time != 'undefined') {
                 $('#timeOnlyFilter').val(time);
             }
-            $('#dateOnlyFilter').val("");
             let date = sessionStorage.getItem("dateFilter");
             if (date && date != 'undefined') {
                 let split = date.split(" - ");
@@ -80,6 +79,7 @@ function getPaginated() {
                     "alwaysShowCalendars": true,
                     "opens": "center"
                 });
+                $('#dateOnlyFilter').val("");
             }
 
            
